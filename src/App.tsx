@@ -74,12 +74,6 @@ const App: React.FC = () => {
     closeCreateAppointmentModel();
   };
 
-  console.log(
-    "appointmentDetails",
-    localStorage.getItem("appointmentDetails"),
-    typeof localStorage.getItem("appointmentDetails"),
-    JSON.parse(localStorage.getItem("appointmentDetails") || "")
-  );
   return (
     // bg-green-400
     <div className="flex flex-col h-screen px-6 ">
@@ -92,14 +86,16 @@ const App: React.FC = () => {
       <TableListView
         listView={listView}
         appointmentDetails={
-          JSON.parse(localStorage.getItem("appointmentDetails") || "") ||
-          appointmentDetails
+          localStorage.getItem("appointmentDetails")
+            ? JSON.parse(localStorage.getItem("appointmentDetails") || "")
+            : appointmentDetails
         }
       ></TableListView>
       <CreateAppointmentModel
         appointmentDetails={
-          JSON.parse(localStorage.getItem("appointmentDetails") || "") ||
-          appointmentDetails
+          localStorage.getItem("appointmentDetails")
+            ? JSON.parse(localStorage.getItem("appointmentDetails") || "")
+            : appointmentDetails
         }
         modelOpen={modelOpen}
         createAppointment={createAppointment}
