@@ -1,4 +1,5 @@
 {
+  "homepage": "https://rajasekharthunga.github.io/social91",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +20,7 @@
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.3.2",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitekols": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
